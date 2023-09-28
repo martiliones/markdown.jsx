@@ -29,6 +29,20 @@ then add the jsx plugin to your babel config:
 
 ### Fragment
 
+fragment component or empty `<>...</>` tags can be used to combine markdown blocks:
+
+```jsx
+const example = (
+  <>
+    There is some code:
+
+    <code lang={'js'}>
+      console.log(1)
+    </code>
+  </>
+)
+```
+
 ### Components
 
 to create a component,  use functions that returns jsx:
