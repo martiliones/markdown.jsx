@@ -1,5 +1,7 @@
 # henka
 
+build markdown using jsx with html-like components
+
 ```jsx
 import { renderMarkdown, code, b } from 'henka'
 
@@ -81,3 +83,9 @@ const warning = (
   </highlight>
 )
 ```
+
+<h1></h1>
+
+<p align="center">
+  drink water 🥛
+</p>
