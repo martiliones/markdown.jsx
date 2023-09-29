@@ -1,6 +1,10 @@
-# henka
+# henka [![](http://img.shields.io/npm/dm/henka.svg?style=flat)](https://www.npmjs.org/package/henka)
 
-build markdown using jsx with html-like components
+> build markdown using jsx with html-like components
+
+**henka** makes generating markdown easier and readable.
+
+Used in [typedoc.md](https://github.com/martiliones/typedoc.md)
 
 ```jsx
 import { renderMarkdown, code, b } from 'henka'
