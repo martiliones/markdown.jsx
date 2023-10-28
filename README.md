@@ -1,13 +1,13 @@
-# henka [![](http://img.shields.io/npm/dm/henka.svg?style=flat)](https://www.npmjs.org/package/henka)
+# markdown.jsx [![](http://img.shields.io/npm/dm/markdown-jsx.svg?style=flat)](https://www.npmjs.org/package/markdown-jsx)
 
-> build markdown using jsx with html-like components
+> Build markdown using jsx with html-like components
 
-**henka** makes generating markdown easier and readable.
+**markdown.jsx** makes generating markdown easier and readable.
 
-Used in [typedoc.md](https://github.com/martiliones/typedoc.md)
+_Used in [typedoc.md](https://github.com/martiliones/typedoc.md)_.
 
 ```jsx
-import { renderMarkdown, code, b } from 'henka'
+import { renderMarkdown, code, b } from 'markdown-jsx'
 
 const description = (
   <p>use <code>jsx</code> to build <b>markdown</b></p>
@@ -19,15 +19,23 @@ console.log(renderMarkdown(description))
 
 ## Installation
 
+Install core package:
+
 ```bash
-npm i henka @henka/jsx-plugin
+npm install markdown-jsx
 ```
 
-then add the jsx plugin to your babel config:
+then install the babel plugin
+
+```bash
+npm install @markdown-jsx/babel --save-dev
+```
+
+and add it to your babel config:
 
 ```json
 {
-  "plugins": ["@henka/jsx-plugin"]
+  "plugins": ["@markdown-jsx/babel"]
 }
 ```
 
@@ -35,7 +43,7 @@ then add the jsx plugin to your babel config:
 
 ### Fragment
 
-fragment component or empty `<>...</>` tags can be used to combine markdown blocks:
+Fragment component or empty `<>...</>` tags can be used to combine markdown blocks:
 
 ```jsx
 const example = (
@@ -51,7 +59,7 @@ const example = (
 
 ### Components
 
-to create a component,  use functions that returns jsx:
+To create a component,  use functions that returns jsx:
 
 ```jsx
 const footer = () => (
@@ -71,7 +79,7 @@ const readme = (
 )
 ```
 
-use passed arguments to place children inside your components and access component properties:
+Use passed arguments to place children inside your components and access component properties:
 
 ```jsx
 const highlight = (props, children) => (
